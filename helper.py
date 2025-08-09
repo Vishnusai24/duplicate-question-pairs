@@ -266,7 +266,7 @@ def preprocess(q):
     q = q.replace("'ll", " will")
 
     # Removing HTML tags
-    q = BeautifulSoup(q)
+    q = BeautifulSoup(q, features="html.parser")
     q = q.get_text()
 
     # Remove punctuations
